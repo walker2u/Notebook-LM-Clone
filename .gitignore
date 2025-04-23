@@ -1,0 +1,96 @@
+# --- General ---
+
+# Operating System files
+.DS_Store
+Thumbs.db
+._*
+
+# IDE/Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+
+# Log files
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Temporary files
+*.tmp
+*~
+temp/
+
+# Environment variables
+# IMPORTANT: Never commit your `.env` files containing secrets!
+.env
+.env.*
+!.env.example
+!.env.template
+# If using specific env files like .env.local, .env.development, etc.
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# --- Dependencies ---
+# Node/npm/yarn/pnpm dependency directories
+# These should be installed, not committed
+node_modules/
+jspm_packages/
+bower_components/
+
+# --- Build Output ---
+# Common build output directories
+dist/
+build/
+out/
+public/build/ # Common for some frameworks/tools
+
+# --- Backend Specific (Node.js / From your code) ---
+
+# Temporary file uploads (based on your Express code)
+# Add this relative to the root .gitignore if 'temp_files' is in the backend dir
+backend/temp_files/
+# Or if 'temp_files' is at the root level (less likely based on your structure)
+# temp_files/
+
+# TypeScript build output (if using TS in backend)
+backend/dist/
+backend/lib/
+backend/*.tsbuildinfo
+
+# --- Frontend Specific ---
+
+# Frontend dependency cache/build directories (add others as needed)
+frontend/node_modules/ # Already covered by global node_modules/, but explicit doesn't hurt
+frontend/build/
+frontend/dist/
+frontend/.parcel-cache/ # Parcel bundler
+frontend/.next/         # Next.js
+frontend/.nuxt/         # Nuxt.js
+frontend/.svelte-kit/   # SvelteKit
+frontend/storybook-static/ # Storybook build output
+frontend/.angular/      # Angular cache
+
+# --- Testing ---
+# Test report directories
+coverage/
+.nyc_output/
+
+# --- Misc ---
+# Optional: Ignore package manager lock files (generally NOT recommended, commit these!)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Optional: Ignore specific configuration files if they contain local overrides
+# config/local.json
+
+# Optional: Crash reports
+*.crash
